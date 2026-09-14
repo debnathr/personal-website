@@ -1,0 +1,418 @@
+---
+import Layout from "../layouts/layout.astro";
+
+const base = `${import.meta.env.BASE_URL}/`;
+
+const publications = [
+  {
+    year: "2026",
+    title: "Making Time-Sensitive Networking Deployable: A Comprehensive Lifecycle Architecture",
+    authors: "R. Debnath et al.",
+    venue: "IEEE EMSOFT",
+    type: "Research paper",
+  },
+  {
+    year: "2026",
+    title: "TSNBench: Benchmarking LLM Proficiency in Time-Sensitive Networking",
+    authors: "R. Debnath et al.",
+    venue: "arXiv Preprint",
+    type: "Under submission",
+  },
+  {
+    year: "2025",
+    title: "Formal timing analysis of CQF interference in TSN: A network calculus-based approach",
+    authors: "R. Debnath et al.",
+    venue: "IEEE RTSS",
+    type: "Research paper",
+  },
+];
+---
+
+<Layout
+  title="Publications | Dr.-Ing. Rubi Debnath"
+  description="Publications and research contributions by Dr.-Ing. Rubi Debnath."
+>
+
+  <main class="page">
+
+    <section class="page-header">
+
+      <p class="eyebrow">
+        PUBLICATIONS
+      </p>
+
+      <h1>
+        Research papers<br />
+        <span>& contributions.</span>
+      </h1>
+
+      <p class="lead">
+        Selected publications and research contributions on
+        intelligent network management, orchestration,
+        deterministic networking, and Time-Sensitive Networking.
+      </p>
+
+    </section>
+
+
+    <section class="publication-list">
+
+      {
+        publications.map((publication) => (
+          <article class="publication">
+
+            <div class="publication-year">
+              {publication.year}
+            </div>
+
+            <div class="publication-main">
+
+              <p class="publication-type">
+                {publication.type}
+              </p>
+
+              <h2>
+                {publication.title}
+              </h2>
+
+              <p class="authors">
+                {publication.authors}
+              </p>
+
+              <p class="venue">
+                {publication.venue}
+              </p>
+
+            </div>
+
+            <div class="publication-arrow">
+              ↗
+            </div>
+
+          </article>
+        ))
+      }
+
+    </section>
+
+
+    <section class="publication-note">
+
+      <p class="eyebrow">
+        MORE
+      </p>
+
+      <h2>
+        Full publication record
+      </h2>
+
+      <p class="publication-intro">
+        A complete publication list, including papers, conference contributions,
+        and technical work, is available on <a href="https://scholar.google.com/citations?user=1VWxOm0AAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+        > Google Scholar </a>.
+      </p>
+
+    </section>
+
+
+    <div class="back-link">
+
+      <a href={base}>
+        ← Back to home
+      </a>
+
+    </div>
+
+  </main>
+
+</Layout>
+
+
+<style>
+
+  .page {
+    width: min(calc(100% - 48px), 1080px);
+
+    margin: 0 auto;
+
+    padding: 100px 0 120px;
+  }
+
+
+  /* HEADER */
+
+  .page-header {
+    max-width: 780px;
+
+    padding-bottom: 90px;
+  }
+
+
+  .eyebrow {
+    margin: 0 0 22px;
+
+    color: #8993a1;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+  }
+
+
+  .page-header h1 {
+    margin: 0;
+
+    color: #11151c;
+
+    font-size:
+      clamp(
+        3rem,
+        6vw,
+        5.2rem
+      );
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: -0.06em;
+  }
+
+
+  .page-header h1 span {
+    color: #8993a1;
+  }
+
+
+  .lead {
+    max-width: 680px;
+
+    margin: 32px 0 0;
+
+    color: #687382;
+
+    font-size: 1rem;
+
+    line-height: 1.85;
+  }
+
+
+  /* PUBLICATIONS */
+
+  .publication-list {
+    border-top: 1px solid #e1e6ed;
+  }
+
+
+  .publication {
+    display: grid;
+
+    grid-template-columns:
+      80px
+      minmax(0, 1fr)
+      40px;
+
+    gap: 30px;
+
+    padding: 38px 0;
+
+    border-bottom: 1px solid #e1e6ed;
+
+    transition:
+      padding 0.25s ease;
+  }
+
+
+  .publication:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+  .publication-year {
+    padding-top: 4px;
+
+    color: #9aa3af;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+  }
+
+
+  .publication-type {
+    margin: 0 0 9px;
+
+    color: #8c96a3;
+
+    font-size: 0.62rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+  }
+
+
+  .publication h2 {
+    max-width: 760px;
+
+    margin: 0 0 10px;
+
+    color: #202630;
+
+    font-size: 1.25rem;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.025em;
+  }
+
+
+  .authors {
+    margin: 0;
+
+    color: #5f6977;
+
+    font-size: 0.82rem;
+
+    line-height: 1.6;
+  }
+
+
+  .venue {
+    margin: 3px 0 0;
+
+    color: #9099a5;
+
+    font-size: 0.76rem;
+  }
+
+
+  .publication-arrow {
+    justify-self: end;
+
+    color: #9aa3af;
+
+    font-size: 1rem;
+
+    transition:
+      transform 0.2s ease,
+      color 0.2s ease;
+  }
+
+
+  .publication:hover .publication-arrow {
+    color: #1677ff;
+
+    transform:
+      translate(3px, -3px);
+  }
+
+
+  /* NOTE */
+
+  .publication-note {
+    max-width: 650px;
+
+    padding: 110px 0 80px;
+  }
+
+
+  .publication-note h2 {
+    margin: 0;
+
+    color: #202630;
+
+    font-size: 1.6rem;
+
+    font-weight: 600;
+
+    letter-spacing: -0.03em;
+  }
+
+
+  .publication-note p:last-child {
+    margin: 15px 0 0;
+
+    color: #737d8b;
+
+    font-size: 0.88rem;
+
+    line-height: 1.8;
+  }
+
+
+  /* BACK */
+
+  .back-link {
+    padding-top: 15px;
+  }
+
+
+  .back-link a {
+    color: #687382;
+
+    font-size: 0.8rem;
+
+    transition:
+      color 0.2s ease;
+  }
+
+
+  .back-link a:hover {
+    color: #1677ff;
+  }
+
+
+  /* MOBILE */
+
+  @media (max-width: 700px) {
+
+    .page {
+      width: min(calc(100% - 32px), 1080px);
+
+      padding: 70px 0 90px;
+    }
+
+
+    .page-header {
+      padding-bottom: 65px;
+    }
+
+
+    .publication {
+      grid-template-columns:
+        45px
+        minmax(0, 1fr)
+        25px;
+
+      gap: 15px;
+
+      padding: 30px 0;
+    }
+
+
+    .publication h2 {
+      font-size: 1.08rem;
+    }
+
+
+    .publication-note {
+      padding: 80px 0 60px;
+    }
+
+  }
+
+</style>

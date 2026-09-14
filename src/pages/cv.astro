@@ -1,0 +1,533 @@
+---
+import Layout from "../layouts/layout.astro";
+
+const base = `${import.meta.env.BASE_URL}/`;
+---
+
+<Layout
+  title="CV | Dr.-Ing. Rubi Debnath"
+  description="Curriculum vitae of Dr.-Ing. Rubi Debnath."
+>
+
+  <main class="page">
+
+    <!-- HEADER -->
+
+    <section class="page-header">
+
+      <p class="eyebrow">
+        CURRICULUM VITAE
+      </p>
+
+      <h1>
+        Experience<br />
+        <span>& education.</span>
+      </h1>
+
+      <p class="lead">
+        Computer Scientist and Postdoctoral Researcher working
+        on AI/ML-based network management, orchestration,
+        deterministic networking, and Time-Sensitive Networking.
+      </p>
+
+      <a
+        class="download-button"
+        href={`${base}cv.pdf`}
+        target="_blank"
+        rel="noopener"
+      >
+        View CV <span>↗</span>
+      </a>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section class="cv-section">
+
+      <div class="section-label">
+        EXPERIENCE
+      </div>
+
+      <div class="timeline">
+
+        <article class="timeline-item">
+
+          <div class="timeline-date">
+            CURRENT
+          </div>
+
+          <div class="timeline-content">
+
+            <p class="category">
+              POSTDOCTORAL RESEARCHER
+            </p>
+
+            <h2>
+              Technical University of Munich (TUM)
+            </h2>
+
+            <p>
+              Research on AI/ML-based network management and
+              orchestration for next-generation wired and wireless
+              deterministic networks.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="timeline-item">
+
+          <div class="timeline-date">
+            PREVIOUS
+          </div>
+
+          <div class="timeline-content">
+
+            <p class="category">
+              RESEARCH
+            </p>
+
+            <h2>
+              Academic & Research Experience
+            </h2>
+
+            <p>
+              Research and development in computer networking,
+              intelligent network management, and communication
+              systems.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section class="cv-section">
+
+      <div class="section-label">
+        EDUCATION
+      </div>
+
+      <div class="timeline">
+
+        <article class="timeline-item">
+
+          <div class="timeline-date">
+            PhD
+          </div>
+
+          <div class="timeline-content">
+
+            <p class="category">
+              DR.-ING.
+            </p>
+
+            <h2>
+              Doctoral Research
+            </h2>
+
+            <p>
+              Doctoral research in computer science and
+              networking.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="timeline-item">
+
+          <div class="timeline-date">
+            MSc
+          </div>
+
+          <div class="timeline-content">
+
+            <p class="category">
+              MASTER'S DEGREE
+            </p>
+
+            <h2>
+              Computer Science / Related Field
+            </h2>
+
+            <p>
+              Graduate studies in computer science and
+              communication technologies.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- RESEARCH INTERESTS -->
+
+    <section class="interests">
+
+      <p class="eyebrow">
+        RESEARCH INTERESTS
+      </p>
+
+      <div class="interest-grid">
+
+        <span>Artificial Intelligence</span>
+        <span>Machine Learning</span>
+        <span>Network Management</span>
+        <span>Network Orchestration</span>
+        <span>Agentic Networking</span>
+        <span>Deterministic Networking</span>
+        <span>Wireless Networking</span>
+        <span>Time-Sensitive Networking</span>
+
+      </div>
+
+    </section>
+
+
+    <div class="back-link">
+
+      <a href={base}>
+        ← Back to home
+      </a>
+
+    </div>
+
+  </main>
+
+</Layout>
+
+
+<style>
+
+  .page {
+    width: min(calc(100% - 48px), 1080px);
+
+    margin: 0 auto;
+
+    padding: 100px 0 120px;
+  }
+
+
+  /* HEADER */
+
+  .page-header {
+    max-width: 780px;
+
+    padding-bottom: 90px;
+  }
+
+
+  .eyebrow {
+    margin: 0 0 22px;
+
+    color: #8993a1;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+  }
+
+
+  .page-header h1 {
+    margin: 0;
+
+    color: #11151c;
+
+    font-size:
+      clamp(
+        3rem,
+        6vw,
+        5.2rem
+      );
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: -0.06em;
+  }
+
+
+  .page-header h1 span {
+    color: #8993a1;
+  }
+
+
+  .lead {
+    max-width: 680px;
+
+    margin: 32px 0;
+
+    color: #687382;
+
+    font-size: 1rem;
+
+    line-height: 1.85;
+  }
+
+
+  /* DOWNLOAD */
+
+  .download-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 16px;
+
+    border: 1px solid #dce2e9;
+
+    border-radius: 9px;
+
+    background: white;
+
+    color: #202630;
+
+    font-size: 0.78rem;
+
+    font-weight: 500;
+
+    box-shadow:
+      0 4px 12px rgba(20, 30, 45, 0.04);
+
+    transition:
+      border-color 0.2s ease,
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+
+  .download-button span {
+    color: #1677ff;
+  }
+
+
+  .download-button:hover {
+    border-color: #cbd3dd;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+      0 8px 20px rgba(20, 30, 45, 0.07);
+  }
+
+
+  /* CV SECTIONS */
+
+  .cv-section {
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 40px;
+
+    padding: 55px 0;
+
+    border-top: 1px solid #e1e6ed;
+  }
+
+
+  .section-label {
+    padding-top: 5px;
+
+    color: #8993a1;
+
+    font-size: 0.65rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+  }
+
+
+  /* TIMELINE */
+
+  .timeline {
+    border-top: 1px solid #edf0f3;
+  }
+
+
+  .timeline-item {
+    display: grid;
+
+    grid-template-columns: 90px 1fr;
+
+    gap: 25px;
+
+    padding: 30px 0;
+
+    border-bottom: 1px solid #edf0f3;
+  }
+
+
+  .timeline-date {
+    padding-top: 4px;
+
+    color: #9aa3af;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.05em;
+  }
+
+
+  .category {
+    margin: 0 0 8px;
+
+    color: #8c96a3;
+
+    font-size: 0.62rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.13em;
+  }
+
+
+  .timeline-content h2 {
+    margin: 0 0 9px;
+
+    color: #202630;
+
+    font-size: 1.12rem;
+
+    font-weight: 600;
+
+    letter-spacing: -0.02em;
+  }
+
+
+  .timeline-content p:last-child {
+    max-width: 620px;
+
+    margin: 0;
+
+    color: #737d8b;
+
+    font-size: 0.84rem;
+
+    line-height: 1.75;
+  }
+
+
+  /* INTERESTS */
+
+  .interests {
+    padding: 100px 0 85px;
+
+    border-top: 1px solid #e1e6ed;
+  }
+
+
+  .interest-grid {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    max-width: 850px;
+  }
+
+
+  .interest-grid span {
+    padding: 8px 13px;
+
+    border: 1px solid #e1e6ed;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    color: #657080;
+
+    font-size: 0.75rem;
+  }
+
+
+  /* BACK */
+
+  .back-link {
+    padding-top: 15px;
+  }
+
+
+  .back-link a {
+    color: #687382;
+
+    font-size: 0.8rem;
+
+    transition: color 0.2s ease;
+  }
+
+
+  .back-link a:hover {
+    color: #1677ff;
+  }
+
+
+  /* MOBILE */
+
+  @media (max-width: 700px) {
+
+    .page {
+      width: min(calc(100% - 32px), 1080px);
+
+      padding: 70px 0 90px;
+    }
+
+
+    .page-header {
+      padding-bottom: 65px;
+    }
+
+
+    .cv-section {
+      grid-template-columns: 1fr;
+
+      gap: 25px;
+
+      padding: 40px 0;
+    }
+
+
+    .timeline-item {
+      grid-template-columns: 55px 1fr;
+
+      gap: 15px;
+    }
+
+
+    .interests {
+      padding: 75px 0 65px;
+    }
+
+  }
+
+</style>

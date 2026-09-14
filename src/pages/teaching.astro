@@ -1,0 +1,580 @@
+---
+import Layout from "../layouts/layout.astro";
+
+const base = `${import.meta.env.BASE_URL}/`;
+---
+
+<Layout
+  title="Teaching | Dr.-Ing. Rubi Debnath"
+  description="Teaching activities and academic contributions by Dr.-Ing. Rubi Debnath."
+>
+
+  <main class="page">
+
+    <!-- HEADER -->
+
+    <section class="page-header">
+
+      <p class="eyebrow">
+        TEACHING
+      </p>
+
+      <h1>
+        Teaching<br />
+        <span>& academic activities.</span>
+      </h1>
+
+      <p class="lead">
+        I am interested in teaching and mentoring at the
+        intersection of computer science, artificial intelligence,
+        computer networking, and distributed systems.
+      </p>
+
+    </section>
+
+
+    <!-- TEACHING AREAS -->
+
+    <section class="teaching-section">
+
+      <div class="section-label">
+        AREAS
+      </div>
+
+      <div class="teaching-list">
+
+        <article class="teaching-item">
+
+          <div class="teaching-number">
+            01
+          </div>
+
+          <div>
+
+            <p class="category">
+              COMPUTER NETWORKING
+            </p>
+
+            <h2>
+              Computer Networks & Networked Systems
+            </h2>
+
+            <p>
+              Networking concepts including communication
+              protocols, network architectures, performance,
+              and modern networked systems.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="teaching-item">
+
+          <div class="teaching-number">
+            02
+          </div>
+
+          <div>
+
+            <p class="category">
+              ARTIFICIAL INTELLIGENCE
+            </p>
+
+            <h2>
+              AI & Machine Learning
+            </h2>
+
+            <p>
+              Foundations and practical applications of
+              artificial intelligence and machine learning,
+              particularly for intelligent systems.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="teaching-item">
+
+          <div class="teaching-number">
+            03
+          </div>
+
+          <div>
+
+            <p class="category">
+              DISTRIBUTED SYSTEMS
+            </p>
+
+            <h2>
+              Distributed & Autonomous Systems
+            </h2>
+
+            <p>
+              Concepts related to distributed computing,
+              autonomous systems, coordination, and
+              intelligent decision-making.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="teaching-item">
+
+          <div class="teaching-number">
+            04
+          </div>
+
+          <div>
+
+            <p class="category">
+              DETERMINISTIC NETWORKING
+            </p>
+
+            <h2>
+              TSN & Deterministic Networks
+            </h2>
+
+            <p>
+              Time-Sensitive Networking, deterministic
+              communication, and emerging approaches for
+              reliable wired and wireless systems.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- MENTORING -->
+
+    <section class="mentoring-section">
+
+      <p class="eyebrow">
+        MENTORING
+      </p>
+
+      <h2>
+        Supporting the next generation
+        <span>of researchers and engineers.</span>
+      </h2>
+
+      <p>
+        I enjoy mentoring students and early-career researchers
+        on research methodology, technical projects, scientific
+        writing, and topics related to AI and computer networking.
+      </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="teaching-cta">
+
+      <div>
+
+        <p class="eyebrow">
+          ACADEMIC COLLABORATION
+        </p>
+
+        <h2>
+          Interested in working together?
+        </h2>
+
+      </div>
+
+      <a
+        href={`${base}contact/`}
+        class="cta-link"
+      >
+        Get in touch <span>→</span>
+      </a>
+
+    </section>
+
+
+    <div class="back-link">
+
+      <a href={base}>
+        ← Back to home
+      </a>
+
+    </div>
+
+  </main>
+
+</Layout>
+
+
+<style>
+
+  .page {
+    width: min(calc(100% - 48px), 1080px);
+
+    margin: 0 auto;
+
+    padding: 100px 0 120px;
+  }
+
+
+  /* HEADER */
+
+  .page-header {
+    max-width: 780px;
+
+    padding-bottom: 90px;
+  }
+
+
+  .eyebrow {
+    margin: 0 0 22px;
+
+    color: #8993a1;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+  }
+
+
+  .page-header h1 {
+    margin: 0;
+
+    color: #11151c;
+
+    font-size:
+      clamp(
+        3rem,
+        6vw,
+        5.2rem
+      );
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: -0.06em;
+  }
+
+
+  .page-header h1 span {
+    color: #8993a1;
+  }
+
+
+  .lead {
+    max-width: 680px;
+
+    margin: 32px 0 0;
+
+    color: #687382;
+
+    font-size: 1rem;
+
+    line-height: 1.85;
+  }
+
+
+  /* TEACHING */
+
+  .teaching-section {
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 40px;
+
+    padding: 55px 0;
+
+    border-top: 1px solid #e1e6ed;
+  }
+
+
+  .section-label {
+    padding-top: 5px;
+
+    color: #8993a1;
+
+    font-size: 0.65rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+  }
+
+
+  .teaching-list {
+    border-top: 1px solid #edf0f3;
+  }
+
+
+  .teaching-item {
+    display: grid;
+
+    grid-template-columns: 55px 1fr;
+
+    gap: 25px;
+
+    padding: 32px 0;
+
+    border-bottom: 1px solid #edf0f3;
+  }
+
+
+  .teaching-number {
+    padding-top: 4px;
+
+    color: #9aa3af;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+  }
+
+
+  .category {
+    margin: 0 0 8px;
+
+    color: #8c96a3;
+
+    font-size: 0.62rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.13em;
+  }
+
+
+  .teaching-item h2 {
+    max-width: 650px;
+
+    margin: 0 0 10px;
+
+    color: #202630;
+
+    font-size: 1.15rem;
+
+    font-weight: 600;
+
+    letter-spacing: -0.025em;
+  }
+
+
+  .teaching-item p:last-child {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #737d8b;
+
+    font-size: 0.84rem;
+
+    line-height: 1.75;
+  }
+
+
+  /* MENTORING */
+
+  .mentoring-section {
+    max-width: 760px;
+
+    padding: 110px 0 100px;
+  }
+
+
+  .mentoring-section h2 {
+    margin: 0;
+
+    color: #11151c;
+
+    font-size:
+      clamp(
+        2.3rem,
+        4.5vw,
+        3.7rem
+      );
+
+    font-weight: 600;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.05em;
+  }
+
+
+  .mentoring-section h2 span {
+    color: #8993a1;
+  }
+
+
+  .mentoring-section > p:last-child {
+    max-width: 680px;
+
+    margin: 28px 0 0;
+
+    color: #737d8b;
+
+    font-size: 0.92rem;
+
+    line-height: 1.8;
+  }
+
+
+  /* CTA */
+
+  .teaching-cta {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding: 35px 0;
+
+    border-top: 1px solid #e1e6ed;
+
+    border-bottom: 1px solid #e1e6ed;
+  }
+
+
+  .teaching-cta .eyebrow {
+    margin-bottom: 10px;
+  }
+
+
+  .teaching-cta h2 {
+    margin: 0;
+
+    color: #202630;
+
+    font-size: 1.15rem;
+
+    font-weight: 600;
+
+    letter-spacing: -0.02em;
+  }
+
+
+  .cta-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+
+    color: #687382;
+
+    font-size: 0.8rem;
+
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+  }
+
+
+  .cta-link span {
+    transition: transform 0.2s ease;
+  }
+
+
+  .cta-link:hover {
+    color: #1677ff;
+  }
+
+
+  .cta-link:hover span {
+    transform: translateX(4px);
+  }
+
+
+  /* BACK */
+
+  .back-link {
+    padding-top: 55px;
+  }
+
+
+  .back-link a {
+    color: #687382;
+
+    font-size: 0.8rem;
+
+    transition: color 0.2s ease;
+  }
+
+
+  .back-link a:hover {
+    color: #1677ff;
+  }
+
+
+  /* MOBILE */
+
+  @media (max-width: 700px) {
+
+    .page {
+      width: min(calc(100% - 32px), 1080px);
+
+      padding: 70px 0 90px;
+    }
+
+
+    .page-header {
+      padding-bottom: 65px;
+    }
+
+
+    .teaching-section {
+      grid-template-columns: 1fr;
+
+      gap: 25px;
+
+      padding: 40px 0;
+    }
+
+
+    .teaching-item {
+      grid-template-columns: 45px 1fr;
+
+      gap: 15px;
+
+      padding: 28px 0;
+    }
+
+
+    .mentoring-section {
+      padding: 80px 0 70px;
+    }
+
+
+    .teaching-cta {
+      align-items: flex-start;
+
+      flex-direction: column;
+
+      gap: 22px;
+    }
+
+  }
+
+</style>
